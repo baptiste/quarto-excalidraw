@@ -1,0 +1,150 @@
+%!TeX program = xelatex
+%!TeX encoding = UTF-8 Unicode
+\documentclass{article}
+
+\usepackage{empheq}
+\usepackage[many]{tcolorbox}
+%\tcbuselibrary{skins}
+
+\tcbset{highlight math style={enhanced,
+  colframe=black!60!white,arc=4pt,boxrule=1pt,
+  }}
+
+
+\usepackage{enumitem}
+
+\definecolor{vuw}{RGB}{1,81,52}
+% \definecolor{vuwfaded}{RGB}{65,134,101}
+% \definecolor{vuwfaint}{RGB}{236,244,242}
+% 
+% 
+\definecolor{col2}{RGB}{7,43,78} % blue
+\definecolor{col3}{RGB}{157,68,25} % orange
+\definecolor{col4}{RGB}{110,1,29} % purple
+
+% math stuff
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\usepackage{bm} % bold
+
+% font stuff
+\usepackage{upquote}
+\usepackage{microtype}
+% \usefonttheme{professionalfonts} % required for mathspec
+\usepackage{fontspec,xltxtra,xunicode}
+% \usepackage[MnSymbol]{mathspec}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchUppercase}
+
+
+\usepackage{sourcesanspro}
+% \setsansfont[BoldFont={Source Sans Pro SemiBold}, Numbers={OldStyle}]{Source Sans Pro Light}
+% \setsansfont{Latin Modern Sans}
+% \setsansfont[BoldFont={Source Serif Pro Bold}, Numbers={OldStyle}]{Source Serif Pro Light}
+% \setsansfont[BoldFont={Fira Sans Medium}, Numbers={OldStyle}]{Fira Sans}
+\setmonofont[Scale=0.8]{Source Code Pro}
+
+%\usepackage{arev} % sans math fonts
+
+% \usepackage[math-style=TeX]{unicode-math}
+% \usepackage[bold-style=ISO]{unicode-math}
+% \setmathfont{xits-math.otf}
+% \setmathfont{XITS Math}
+% \setmathfont{Latin Modern Math}
+% \setmathfont{TeX Gyre Schola Math}%horrible
+% \setmathfont{TeX Gyre DejaVu Math}
+% \setmathfont{Libertinus Math} % OK
+% \setmathfont{Latin Modern Math}
+% \setmathfont[range=\sum]{Latin Modern Math} % substitute Sum sign
+% \setmathfont[range={}]{Latin Modern Math}
+
+
+%\usepackage{mathabx} % oiint
+\usepackage{mathrsfs} %fancy P
+\usepackage{fancyvrb}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{url}
+
+\usepackage{graphicx} % already loaded actually
+\graphicspath{{./figures/}}
+\DeclareGraphicsExtensions{%
+    .pdf,.PDF,%
+    .png,.PNG,%
+    .jpg,.mps,.jpeg,.jbig2,.jb2,.JPG,.JPEG,.JBIG2,.JB2}
+\usepackage{grfext}
+\PrependGraphicsExtensions*{.png,.pdf}
+
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight0.8\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+% avoid problems with \sout in headers with hyperref:
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+% \providecommand{\tightlist}{%
+%   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\tightlist}{}
+% \def\tightlist{} % overwrite pandoc
+$if(numbersections)$
+$else$
+\setcounter{secnumdepth}{0}
+$endif$
+$if(verbatim-in-note)$
+\VerbatimFootnotes % allows verbatim text in footnotes
+$endif$
+$if(lang)$
+\ifxetex
+  \usepackage{polyglossia}
+  \setmainlanguage{$mainlang$}
+  \setotherlanguages{$for(otherlang)$$otherlang$$sep$,$endfor$}
+\else
+  \usepackage[shorthands=off,$lang$]{babel}
+\fi
+$endif$
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+$if(title)$
+\title{$title$}
+$endif$
+$if(subtitle)$
+\subtitle{$subtitle$}
+$endif$
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+\date{$taught$}
+
+
+%%%
+
+\input{_macros.tex}
+
+%%%
+% ,sections,graphics
+\usepackage[active,tightpage,displaymath,textmath]{preview}
+% \PreviewEnvironment{equation}
+
+\begin{document}
+
+
+
+$for(include-before)$
+$include-before$
+
+$endfor$
+
+$body$
+
+\end{document}

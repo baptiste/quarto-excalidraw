@@ -1,0 +1,176 @@
+---
+title: "electromagnetism & wave optics"
+author: "baptiste"
+taught: "\\the\\year, T2"
+---
+
+## Interface
+
+Consider $\left(\varepsilon_{1}, \varepsilon_{2}\right) \in \mathbb{R}_{+}^{2}$,  all waves are propagating. 
+
+Plane waves: $\vecE(\mathbf{r})=\vecE_{0} e^{i \mathbf{k} \cdot \mathbf{r}}$
+
+
+The wave-vectors are 
+$$
+\mathbf{k}_{i}=\left(\begin{array}{l}
+k_{i x} \\
+k_{i y} \\
+k_{i z}
+\end{array}\right) \quad \mathbf{k}_{r}=\left(\begin{array}{l}
+k_{r x} \\
+k_{r y} \\
+k_{r z}
+\end{array}\right) \quad \mathbf{k}_{t}=\left(\begin{array}{l}
+k_{t x} \\
+k_{t y} \\
+k_{t z}
+\end{array}\right)
+$$
+Electric fields, 
+$$
+\vecE_i(\mathbf{r})=\vecE_{0} e^{i \mathbf{k_i} \cdot \mathbf{r}},\vecE_r(\mathbf{r})=r\vecE_{0} e^{i \mathbf{k_r} \cdot \mathbf{r}},\vecE_t(\mathbf{r})=t\vecE_{0} e^{i \mathbf{k_t} \cdot \mathbf{r}}
+$$
+
+## Snell-Descartes laws
+
+Using the boundary condition for $\vecE^\parallel$ at $z=0$ we show that $\veck_i,\veck_t,\veck_r$ are in the same plane ("plane of incidence"), and that $\veck_\parallel$ is conserved.
+
+$$
+\left.e^{i \mathbf{k_i} \cdot \mathbf{r}} + r e^{i \mathbf{k_r} \cdot \mathbf{r}}=t e^{i \mathbf{k_t} \cdot \mathbf{r}}\right|_{z=0}
+$$
+Consider the incident wave in the (xOz) plane ($k_y=0$), 
+
+$$
+e^{i {k_{ix}x}} + r e^{i{k_{rx}x+k_{ry}y}} = t e^{i{k_{tx}x+k_{ty}y}}, \forall (x,y)
+$$
+At $x=0$: 
+$$
+1 + r e^{i{k_{ry}y}} = t e^{i{k_{ty}y}}, \forall y
+$$
+but $r,t$ do not depend on $(x,y)$ (by assumption: we're looking for translation-invariant solutions)
+. The real part reads,
+$$
+1 + r \cos(k_{ry}y) = t \cos({k_{ty}y})
+$$
+By orthogonality of the cosines, this implies that $k_{ry}=k_{ty}=0$, and in the general case that the plane of incidence is conserved.
+
+## Snell-Descartes laws (ctd.)
+
+Setting $k_y=0$,
+$$
+e^{i {k_{ix}x}} + r e^{i{k_{rx}x}} = t e^{i{k_{tx}x}}, \forall x
+$$
+multiply by $e^{-i {k_{ix}x}}$,
+$$
+1 + r e^{i{(k_{rx}-k_{ix})x}} = t e^{i{(k_{tx}-k_{ix})x}}, \forall x
+$$
+which leads to $k_{rx}=k_{tx}=k_{ix}$: the in-plane momentum is conserved. Geometrically, for propagating waves,
+
+$$
+\theta_i = \theta_r,\quad n_1\sin \theta_i=n_2\sin \theta_t
+$$
+
+Note: translational invariance of the problem along the plane implies conservation of $k_{x}, k_{y}$ (Noether theorems -- same argument links time translation symmetry to conservation of energy, rotation symmetry to conservation of angular momentum, etc.)
+
+## k-vectors
+
+Dispersion relations: 
+$$
+\mathbf{k}_{i} \cdot \mathbf{k}_{i}=k_{0}^{2} \varepsilon_{i} \quad \Rightarrow k_{i}=k_{0} \sqrt{\varepsilon_{i}}=k_{0} n_{i}
+$$
+Explicitly,
+$$
+\left\{\begin{array}{l}k_{i x}=n_{1} k_{0} \sin \theta_{i} \\ k_{r x}=n_{1} k_{0} \sin \theta_{r} \\ k_{t x}=n_{2} k_{0} \sin \theta_{t}\end{array}\right.
+$$
+leading to
+$$
+\left\{\begin{array}{c}\theta_{i}=\theta_{r} \\ n_{1} \sin \theta_{i}=n_{2} \sin \theta_{t}\end{array}\right.
+$$
+(used in geometrical optics)
+
+## Interface: Fresnel coefficients
+
+Plane of incidence: $(x 0 z) \Rightarrow \mathbf{k}_{1}=k_{1 x} \mathbf{e}_{x}+k_{1 z} \mathbf{e}_{z}$
+
+Boundary conditions at $z=0$, $k_{i x}=k_{r x}=k_{t x} \equiv k_{x}$
+
+Dispersion relations: $\mathbf{k} \cdot \mathbf{k}=\varepsilon k_{0}^{2}$
+$$
+\Rightarrow \left\{\begin{array}{l}
+k_{x}^{2}+k_{i z}^{2}=\varepsilon_{1} k_{0}^{2} \quad \Rightarrow k_{i z}=\pm \sqrt{\varepsilon_{1} k_{0}^{2}-k_{x}^{2}}=-k_{r z} \\
+k_{x}^{2}+k_{r z}^{2}=\varepsilon_{1} k_{0}^{2} \\
+k_{x}^{2}+k_{t z}^{2}=\varepsilon_{2} k_{0}^{2}
+\end{array}\right.
+$$
+
+## TE case
+
+
+For TE-polarised light, the continuity of $E^y$ reads,
+\[
+E_i + E_r  = E_t
+\]
+which yields,
+$$
+  1+r =t.
+$$
+The continuity of $H^x$  gives us another equation. $H^x$ is obtained from $\veck\times\vecE = \omega\vecB = \omega\mu\vecH$,
+$$
+\omega\mu H_x = k_z E_y
+$$
+leading to:
+$$
+\frac{k_{iz}}{\mu_1}E_{iy} + \frac{k_{rz}}{\mu_1}E_{ry} = \frac{k_{tz}}{\mu_2}E_{ty}
+$$
+and noting that $k_{rz} = -k_{iz}$,
+$$
+\frac{k_{iz}}{\mu_1} - \frac{k_{iz}}{\mu_1}r = \frac{k_{tz}}{\mu_2}t,
+$$
+$$
+1 - r = \frac{\mu_1}{\mu_2}\frac{k_{tz}}{k_{iz}}t
+$$
+
+
+## TE case (ctd.)
+
+We can summarize the two continuity relations in the following system,
+
+$$\left\{
+\begin{aligned}
+1 + r &= t\\
+1 - r &= \frac{\mu_1}{\mu_2}\frac{k_{tz}}{k_{iz}}t
+\end{aligned}\right.
+$$
+Solving for $r$ and $t$ yields the result,
+$$
+t_{12}^s=\frac{2\mu_2 k_{z1}}{\mu_2 k_{z1}+\mu_1k_{z2}},\qquad r_{12}^s=\frac{\mu_2 k_{z1}-\mu_1k_{z2}}{\mu_2 k_{z1}+\mu_1k_{z2}}.
+$$
+$$
+t_{12}^s=\frac{2}{1+K_s},\qquad r_{12}^s=\frac{1 - K_s}{1 + K_s},\qquad K_s:=\frac{\mu_1}{\mu_2}\frac{k_{z2}}{k_{z1}}
+$$
+
+## Fresnel coefficients
+
+To summarize, for a single interface from 1 to 2 with normal along the $z$ direction, the Fresnel coefficients read,
+$$
+	\begin{aligned}
+	\rho_{12}^p & =\frac{\varepsilon_2 k_{z1}-\varepsilon_1k_{z2}}{\varepsilon_2 k_{z1}+\varepsilon_1k_{z2}} = \frac{1-K^p}{1+K^p},%
+	& {}& r_{12}^s=\frac{\mu_2 k_{z1}-\mu_1k_{z2}}{\mu_2 k_{z1}+\mu_1k_{z2}} = \frac{1-K^s}{1+K^s}\\
+	\tau_{12}^p &=\frac{2\varepsilon_2 k_{z1}}{\varepsilon_2 k_{z1}+\varepsilon_1k_{z2}} = \frac{2}{1+K^p},%
+	&{}& t_{12}^s=\frac{2\mu_2 k_{z1}}{\mu_2 k_{z1}+\mu_1k_{z2}} = \frac{2}{1+K^s}
+	\end{aligned}
+$$
+with $K^p:= \frac{\varepsilon_1 k_{z2}}{\varepsilon_2 k_{z1}}$, $K^s:= \frac{ k_{z2}}{ k_{z1}}$ (often we will assume $\mu=1$).
+
+Note that,
+$$
+	r_{ij}=-r_{ji}.
+$$
+For propagating incident and transmitted waves, equivalent expressions can also be given in terms of the angle of incidence $\theta$ :
+$$
+r^{p}=\frac{n_{2} \cos \theta-n_{1} \sqrt{1-\frac{n_{1}^{2}}{n_{2}^{2}} \sin ^{2} \theta}}{n_{2} \cos \theta+n_{1} \sqrt{1-\frac{n_{1}^{2}}{n_{2}^{2}} \sin ^{2} \theta}} 
+$$
+
+
+

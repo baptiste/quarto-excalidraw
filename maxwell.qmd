@@ -1,0 +1,81 @@
+---
+title: "electromagnetism & wave optics"
+author: "baptiste"
+taught: "\\the\\year, T2"
+---
+
+
+## Inconsistency for time-varying currents
+
+By time of James Clerk Maxwell (mid-19th century):
+
+$$\begin{aligned}
+\Div\vecE& =\rho / \varepsilon_0\qquad\text{(Gau\ss)}\\
+\Div\vecB&=0\qquad\text{(no magnetic monopoles)}\\
+\Curl\vecE&=-\partial_t \vecB\qquad\text{(Faraday)}\\
+\Curl\vecB&=\mu_0 \vecJ\qquad\text{(Ampère)}
+\end{aligned}
+$$
+\hrule
+
+BUT\dots\ an inconsistency arises, as $\Div(\Curl\vecV)\equiv 0$ for any vector $\vecV$:
+$$
+\Div(\Curl\vecE)=-\partial_t (\Div\vecB)=0 \qquad(\text{all good})
+$$
+Yet,
+$$
+\Div(\Curl\vecB)=\mu_0 \Div\vecJ \neq 0 \qquad(\text{problem!})
+$$
+
+$\Div\vecJ = -\partial_t \rho$, so $\Div\vecJ = 0$ only for steady currents (magnetostatics).
+
+## Maxwell's contribution
+
+Maxwell realised that the last equation needed an additional term. Applying continuity of current/charge:
+$$
+\begin{aligned}
+\Div\vecJ &=-\frac{\partial \rho}{\partial t} \\
+&=-\frac{\partial}{\partial t}\left(\varepsilon_0\Div\vecE\right)=-\Div\left(\varepsilon_0 \frac{\partial \vecE}{\partial t}\right)
+\end{aligned}
+$$
+If we add $\mu_0 \varepsilon_0 \frac{\partial \vecE}{\partial t}$ to the current $\vecJ$, the inconsistency disappears and the last curl equation becomes:
+$$
+\Curl\vecB=\mu_0 \vecJ+\mu_0 \varepsilon_0 \frac{\partial \vecE}{\partial t} \quad \text { (Ampère's law with Maxwell's correction) }
+$$
+$\varepsilon_0 \frac{\partial \vecE}{\partial t}$ is called the "_displacement current density_".
+
+## Electrodynamics
+
+Our starting point: the electromagnetic field obeys Maxwell's equations:
+$$
+\begin{aligned}
+\Div\vecD &= \rho_f\\
+\Div\vecB &= 0\\
+\Curl\vecE &= -\frac{\partial\vecB}{\partial t}\\
+\Curl\vecH &= \frac{\partial\vecD}{\partial t} + \vecJ_f
+\end{aligned}
+$$
+Lorentz force:
+$$
+\vecF = q\left(\vecE + \vecv \times \vecB\right)
+$$
++ *constitutive relations* ($\sigma, \varepsilon, \mu,\dots$) and *boundary conditions*
+
+
+## Remark on constitutive relations
+
+Material responses are very diverse (anisotropic, gyrotropic, nonlinear, nonlocal, hysteresis, \dots). We'll only discuss the most common approximations,
+
+- *Linear approximation*:
+$$
+\begin{array}{l}
+\mathbf{P}(\mathbf{r}, t)=\varepsilon_{0}\left(\overline{\bar{\chi}}_{e}^{(1)} \mathbf{E}(\mathbf{r}, t)+\overline{\bar{\chi}}_{e}^{(2)} \mathbf{E}^{2}(\mathbf{r}, t)+\overline{\bar{\chi}}_{e}^{(3)} \mathbf{E}^{3}(\mathbf{r}, t)+\ldots\right) \\
+\mathbf{P}(\mathbf{r}, t)=\varepsilon_{0} \overline{\bar{\chi}}_{e} \mathbf{E}(\mathbf{r}, t)
+\end{array}
+$$
+- *Isotropic medium*: $\chi_e$ is a scalar ($\mathbf{P}$ and $\mathbf{E}$ have the same orientation)
+- *Non-locality in space*: $\vecP$ depends on the electric field in the vicinity of a point $\mathbf{P}(\mathbf{r}, t)=\varepsilon_{0} \int d \mathbf{r}^{\prime} \chi\left(\mathbf{r}^{\prime}-\mathbf{r}, t\right) \mathbf{E}\left(\mathbf{r}^{\prime}, t\right)$
+If we use spatial Fourier Transform, this convolution product simply becomes: $\underline{\mathbf{P}}(\mathbf{k}, t)=\varepsilon_{0} \underline{\chi_{e}}(\mathbf{k}, t) \underline{\mathbf{E}}(\mathbf{k}, t)$ 
+$\to \varepsilon(\veck,\omega)$ (cf Kittel, etc.)
+
+

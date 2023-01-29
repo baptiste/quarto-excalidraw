@@ -1,0 +1,11 @@
+project:
+  title: "quarto-excalidraw"
+  post-render: 
+    - _to-excalidraw.R
+
+format:
+  beamer:
+    template: _template.tex
+    keep-tex: true
+    slide-level: 2
+    fig-caption: false
