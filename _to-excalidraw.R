@@ -1,6 +1,9 @@
 
 library(purrr)
-
+library(fs)
+library(minixcali)
+library(minisvg)
+library(glue)
 # system("pandoc --lua-filter ./filter.lua extract.tex -o math.tex")
 # system("de-macro 01-maxwell")
 #
@@ -41,8 +44,6 @@ grab_math_strings <- function(fe){
   start <- lines+1
   end <- c(lines[-1], length(content) + 1) - 1
 
-  library(purrr)
-
   eqs <- map2(start, end, function(x,y) paste(gsub("\\\\\\(|\\\\\\)|\\\\\\[|\\\\\\]", "",
                                                    content[x:y]), collapse = ' '))
   eqs <- gsub('\\\\ss',"ß",eqs)
@@ -68,6 +69,7 @@ extract_math <- function(fe){
   # fe <- fs::path_ext_remove(f)
   # system(glue("de-macro {fe}"))
   svg_sizing(fe)
+  system(glue("quarto pandoc --lua-filter ./_extract-maths.lua {fe}.tex -t native -o {fe}-debug"))
   system(glue("quarto pandoc --lua-filter ./_extract-maths.lua {fe}.tex -o {fe}-math.tex"))
   grab_math_strings(fe)
 }

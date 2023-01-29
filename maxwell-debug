@@ -1,0 +1,104 @@
+[ Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\begin{aligned}\n\\nabla\\cdot\\mathbf{E}& =\\rho / \\varepsilon_0\\qquad\\text{(Gau\\ss)}\\\\\n\\nabla\\cdot\\mathbf{B}&=0\\qquad\\text{(no magnetic monopoles)}\\\\\n\\nabla\\times\\mathbf{E}&=-\\partial_t \\mathbf{B}\\qquad\\text{(Faraday)}\\\\\n\\nabla\\times\\mathbf{B}&=\\mu_0 \\mathbf{J}\\qquad\\text{(Amp\232re)}\n\\end{aligned}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        InlineMath
+        "\\nabla\\cdot(\\nabla\\times\\mathbf{V})\\equiv 0"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "\\mathbf{V}" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\nabla\\cdot(\\nabla\\times\\mathbf{E})=-\\partial_t (\\nabla\\cdot\\mathbf{B})=0 \\qquad(\\text{all good})"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\nabla\\cdot(\\nabla\\times\\mathbf{B})=\\mu_0 \\nabla\\cdot\\mathbf{J}\\neq 0 \\qquad(\\text{problem!})"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        InlineMath "\\nabla\\cdot\\mathbf{J}= -\\partial_t \\rho"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "\\nabla\\cdot\\mathbf{J}= 0" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\begin{aligned}\n\\nabla\\cdot\\mathbf{J}&=-\\frac{\\partial \\rho}{\\partial t} \\\\\n&=-\\frac{\\partial}{\\partial t}\\left(\\varepsilon_0\\nabla\\cdot\\mathbf{E}\\right)=-\\nabla\\cdot\\left(\\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t}\\right)\n\\end{aligned}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        InlineMath
+        "\\mu_0 \\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "\\mathbf{J}" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\nabla\\times\\mathbf{B}=\\mu_0 \\mathbf{J}+\\mu_0 \\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t} \\quad \\text { (Amp\232re's law with Maxwell's correction) }"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        InlineMath
+        "\\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\begin{aligned}\n\\nabla\\cdot\\mathbf{D}&= \\rho_f\\\\\n\\nabla\\cdot\\mathbf{B}&= 0\\\\\n\\nabla\\times\\mathbf{E}&= -\\frac{\\partial\\mathbf{B}}{\\partial t}\\\\\n\\nabla\\times\\mathbf{H}&= \\frac{\\partial\\mathbf{D}}{\\partial t} + \\mathbf{J}_f\n\\end{aligned}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\mathbf{F}= q\\left(\\mathbf{E}+ \\mathbf{v}\\times \\mathbf{B}\\right)"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math InlineMath "\\sigma, \\varepsilon, \\mu,\\dots" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\begin{array}{l}\n  \\mathbf{P}(\\mathbf{r}, t)=\\varepsilon_{0}\\left(\\overline{\\bar{\\chi}}_{e}^{(1)} \\mathbf{E}(\\mathbf{r}, t)+\\overline{\\bar{\\chi}}_{e}^{(2)} \\mathbf{E}^{2}(\\mathbf{r}, t)+\\overline{\\bar{\\chi}}_{e}^{(3)} \\mathbf{E}^{3}(\\mathbf{r}, t)+\\ldots\\right) \\\\\n  \\mathbf{P}(\\mathbf{r}, t)=\\varepsilon_{0} \\overline{\\bar{\\chi}}_{e} \\mathbf{E}(\\mathbf{r}, t)\n  \\end{array}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "\\chi_e" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "\\mathbf{P}" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "\\mathbf{E}" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "\\mathbf{P}" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        InlineMath
+        "\\mathbf{P}(\\mathbf{r}, t)=\\varepsilon_{0} \\int d \\mathbf{r}^{\\prime} \\chi\\left(\\mathbf{r}^{\\prime}-\\mathbf{r}, t\\right) \\mathbf{E}\\left(\\mathbf{r}^{\\prime}, t\\right)"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        InlineMath
+        "\\underline{\\mathbf{P}}(\\mathbf{k}, t)=\\varepsilon_{0} \\underline{\\chi_{e}}(\\mathbf{k}, t) \\underline{\\mathbf{E}}(\\mathbf{k}, t)"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math InlineMath "\\to \\varepsilon(\\mathbf{k},\\omega)" ]
+]

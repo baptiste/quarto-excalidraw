@@ -1,0 +1,324 @@
+%!TeX program = xelatex
+%!TeX encoding = UTF-8 Unicode
+\documentclass{article}
+
+\usepackage{empheq}
+\usepackage[many]{tcolorbox}
+%\tcbuselibrary{skins}
+
+\tcbset{highlight math style={enhanced,
+  colframe=black!60!white,arc=4pt,boxrule=1pt,
+  }}
+
+
+\usepackage{enumitem}
+
+\definecolor{vuw}{RGB}{1,81,52}
+% \definecolor{vuwfaded}{RGB}{65,134,101}
+% \definecolor{vuwfaint}{RGB}{236,244,242}
+% 
+% 
+\definecolor{col2}{RGB}{7,43,78} % blue
+\definecolor{col3}{RGB}{157,68,25} % orange
+\definecolor{col4}{RGB}{110,1,29} % purple
+
+% math stuff
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\usepackage{bm} % bold
+
+% font stuff
+\usepackage{upquote}
+\usepackage{microtype}
+% \usefonttheme{professionalfonts} % required for mathspec
+\usepackage{fontspec,xltxtra,xunicode}
+% \usepackage[MnSymbol]{mathspec}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchUppercase}
+
+
+\usepackage{sourcesanspro}
+% \setsansfont[BoldFont={Source Sans Pro SemiBold}, Numbers={OldStyle}]{Source Sans Pro Light}
+% \setsansfont{Latin Modern Sans}
+% \setsansfont[BoldFont={Source Serif Pro Bold}, Numbers={OldStyle}]{Source Serif Pro Light}
+% \setsansfont[BoldFont={Fira Sans Medium}, Numbers={OldStyle}]{Fira Sans}
+\setmonofont[Scale=0.8]{Source Code Pro}
+
+%\usepackage{arev} % sans math fonts
+
+% \usepackage[math-style=TeX]{unicode-math}
+% \usepackage[bold-style=ISO]{unicode-math}
+% \setmathfont{xits-math.otf}
+% \setmathfont{XITS Math}
+% \setmathfont{Latin Modern Math}
+% \setmathfont{TeX Gyre Schola Math}%horrible
+% \setmathfont{TeX Gyre DejaVu Math}
+% \setmathfont{Libertinus Math} % OK
+% \setmathfont{Latin Modern Math}
+% \setmathfont[range=\sum]{Latin Modern Math} % substitute Sum sign
+% \setmathfont[range={}]{Latin Modern Math}
+
+
+%\usepackage{mathabx} % oiint
+\usepackage{mathrsfs} %fancy P
+\usepackage{fancyvrb}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{url}
+
+\usepackage{graphicx} % already loaded actually
+\graphicspath{{./figures/}}
+\DeclareGraphicsExtensions{%
+    .pdf,.PDF,%
+    .png,.PNG,%
+    .jpg,.mps,.jpeg,.jbig2,.jb2,.JPG,.JPEG,.JBIG2,.JB2}
+\usepackage{grfext}
+\PrependGraphicsExtensions*{.png,.pdf}
+
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight0.8\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+% avoid problems with \sout in headers with hyperref:
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+% \providecommand{\tightlist}{%
+%   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\tightlist}{}
+% \def\tightlist{} % overwrite pandoc
+\setcounter{secnumdepth}{0}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+
+\title{electromagnetism \& wave optics}
+\author{baptiste}
+\date{\the\year, T2}
+
+
+%%%
+
+\input{_macros.tex}
+
+%%%
+% ,sections,graphics
+\usepackage[active,tightpage,displaymath,textmath]{preview}
+% \PreviewEnvironment{equation}
+
+\begin{document}
+
+
+
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, interior hidden, sharp corners, breakable, frame hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt]}{\end{tcolorbox}}\fi
+
+
+\begin{frame}{Interface}
+\protect\hypertarget{interface}{}
+Consider
+\(\left(\varepsilon_{1}, \varepsilon_{2}\right) \in \mathbb{R}_{+}^{2}\),
+all waves are propagating.
+
+Plane waves:
+\(\vecE(\mathbf{r})=\vecE_{0} e^{i \mathbf{k} \cdot \mathbf{r}}\)
+
+The wave-vectors are \[
+\mathbf{k}_{i}=\left(\begin{array}{l}
+k_{i x} \\
+k_{i y} \\
+k_{i z}
+\end{array}\right) \quad \mathbf{k}_{r}=\left(\begin{array}{l}
+k_{r x} \\
+k_{r y} \\
+k_{r z}
+\end{array}\right) \quad \mathbf{k}_{t}=\left(\begin{array}{l}
+k_{t x} \\
+k_{t y} \\
+k_{t z}
+\end{array}\right)
+\] Electric fields, \[
+\vecE_i(\mathbf{r})=\vecE_{0} e^{i \mathbf{k_i} \cdot \mathbf{r}},\vecE_r(\mathbf{r})=r\vecE_{0} e^{i \mathbf{k_r} \cdot \mathbf{r}},\vecE_t(\mathbf{r})=t\vecE_{0} e^{i \mathbf{k_t} \cdot \mathbf{r}}
+\]
+\end{frame}
+
+\begin{frame}{Snell-Descartes laws}
+\protect\hypertarget{snell-descartes-laws}{}
+Using the boundary condition for \(\vecE^\parallel\) at \(z=0\) we show
+that \(\veck_i,\veck_t,\veck_r\) are in the same plane (``plane of
+incidence''), and that \(\veck_\parallel\) is conserved.
+
+\[
+\left.e^{i \mathbf{k_i} \cdot \mathbf{r}} + r e^{i \mathbf{k_r} \cdot \mathbf{r}}=t e^{i \mathbf{k_t} \cdot \mathbf{r}}\right|_{z=0}
+\] Consider the incident wave in the (xOz) plane (\(k_y=0\)),
+
+\[
+e^{i {k_{ix}x}} + r e^{i{k_{rx}x+k_{ry}y}} = t e^{i{k_{tx}x+k_{ty}y}}, \forall (x,y)
+\] At \(x=0\): \[
+1 + r e^{i{k_{ry}y}} = t e^{i{k_{ty}y}}, \forall y
+\] but \(r,t\) do not depend on \((x,y)\) (by assumption: we're looking
+for translation-invariant solutions) . The real part reads, \[
+1 + r \cos(k_{ry}y) = t \cos({k_{ty}y})
+\] By orthogonality of the cosines, this implies that
+\(k_{ry}=k_{ty}=0\), and in the general case that the plane of incidence
+is conserved.
+\end{frame}
+
+\begin{frame}{Snell-Descartes laws (ctd.)}
+\protect\hypertarget{snell-descartes-laws-ctd.}{}
+Setting \(k_y=0\), \[
+e^{i {k_{ix}x}} + r e^{i{k_{rx}x}} = t e^{i{k_{tx}x}}, \forall x
+\] multiply by \(e^{-i {k_{ix}x}}\), \[
+1 + r e^{i{(k_{rx}-k_{ix})x}} = t e^{i{(k_{tx}-k_{ix})x}}, \forall x
+\] which leads to \(k_{rx}=k_{tx}=k_{ix}\): the in-plane momentum is
+conserved. Geometrically, for propagating waves,
+
+\[
+\theta_i = \theta_r,\quad n_1\sin \theta_i=n_2\sin \theta_t
+\]
+
+Note: translational invariance of the problem along the plane implies
+conservation of \(k_{x}, k_{y}\) (Noether theorems -- same argument
+links time translation symmetry to conservation of energy, rotation
+symmetry to conservation of angular momentum, etc.)
+\end{frame}
+
+\begin{frame}{k-vectors}
+\protect\hypertarget{k-vectors}{}
+Dispersion relations: \[
+\mathbf{k}_{i} \cdot \mathbf{k}_{i}=k_{0}^{2} \varepsilon_{i} \quad \Rightarrow k_{i}=k_{0} \sqrt{\varepsilon_{i}}=k_{0} n_{i}
+\] Explicitly, \[
+\left\{\begin{array}{l}k_{i x}=n_{1} k_{0} \sin \theta_{i} \\ k_{r x}=n_{1} k_{0} \sin \theta_{r} \\ k_{t x}=n_{2} k_{0} \sin \theta_{t}\end{array}\right.
+\] leading to \[
+\left\{\begin{array}{c}\theta_{i}=\theta_{r} \\ n_{1} \sin \theta_{i}=n_{2} \sin \theta_{t}\end{array}\right.
+\] (used in geometrical optics)
+\end{frame}
+
+\begin{frame}{Interface: Fresnel coefficients}
+\protect\hypertarget{interface-fresnel-coefficients}{}
+Plane of incidence:
+\((x 0 z) \Rightarrow \mathbf{k}_{1}=k_{1 x} \mathbf{e}_{x}+k_{1 z} \mathbf{e}_{z}\)
+
+Boundary conditions at \(z=0\), \(k_{i x}=k_{r x}=k_{t x} \equiv k_{x}\)
+
+Dispersion relations:
+\(\mathbf{k} \cdot \mathbf{k}=\varepsilon k_{0}^{2}\) \[
+\Rightarrow \left\{\begin{array}{l}
+k_{x}^{2}+k_{i z}^{2}=\varepsilon_{1} k_{0}^{2} \quad \Rightarrow k_{i z}=\pm \sqrt{\varepsilon_{1} k_{0}^{2}-k_{x}^{2}}=-k_{r z} \\
+k_{x}^{2}+k_{r z}^{2}=\varepsilon_{1} k_{0}^{2} \\
+k_{x}^{2}+k_{t z}^{2}=\varepsilon_{2} k_{0}^{2}
+\end{array}\right.
+\]
+\end{frame}
+
+\begin{frame}{TE case}
+\protect\hypertarget{te-case}{}
+For TE-polarised light, the continuity of \(E^y\) reads, {[} E\_i + E\_r
+= E\_t {]} which yields, \[
+  1+r =t.
+\] The continuity of \(H^x\) gives us another equation. \(H^x\) is
+obtained from \(\veck\times\vecE = \omega\vecB = \omega\mu\vecH\), \[
+\omega\mu H_x = k_z E_y
+\] leading to: \[
+\frac{k_{iz}}{\mu_1}E_{iy} + \frac{k_{rz}}{\mu_1}E_{ry} = \frac{k_{tz}}{\mu_2}E_{ty}
+\] and noting that \(k_{rz} = -k_{iz}\), \[
+\frac{k_{iz}}{\mu_1} - \frac{k_{iz}}{\mu_1}r = \frac{k_{tz}}{\mu_2}t,
+\] \[
+1 - r = \frac{\mu_1}{\mu_2}\frac{k_{tz}}{k_{iz}}t
+\]
+\end{frame}
+
+\begin{frame}{TE case (ctd.)}
+\protect\hypertarget{te-case-ctd.}{}
+We can summarize the two continuity relations in the following system,
+
+\[\left\{
+\begin{aligned}
+1 + r &= t\\
+1 - r &= \frac{\mu_1}{\mu_2}\frac{k_{tz}}{k_{iz}}t
+\end{aligned}\right.
+\] Solving for \(r\) and \(t\) yields the result, \[
+t_{12}^s=\frac{2\mu_2 k_{z1}}{\mu_2 k_{z1}+\mu_1k_{z2}},\qquad r_{12}^s=\frac{\mu_2 k_{z1}-\mu_1k_{z2}}{\mu_2 k_{z1}+\mu_1k_{z2}}.
+\] \[
+t_{12}^s=\frac{2}{1+K_s},\qquad r_{12}^s=\frac{1 - K_s}{1 + K_s},\qquad K_s:=\frac{\mu_1}{\mu_2}\frac{k_{z2}}{k_{z1}}
+\]
+\end{frame}
+
+\begin{frame}{Fresnel coefficients}
+\protect\hypertarget{fresnel-coefficients}{}
+To summarize, for a single interface from 1 to 2 with normal along the
+\(z\) direction, the Fresnel coefficients read, \[
+    \begin{aligned}
+    \rho_{12}^p & =\frac{\varepsilon_2 k_{z1}-\varepsilon_1k_{z2}}{\varepsilon_2 k_{z1}+\varepsilon_1k_{z2}} = \frac{1-K^p}{1+K^p},%
+    & {}& r_{12}^s=\frac{\mu_2 k_{z1}-\mu_1k_{z2}}{\mu_2 k_{z1}+\mu_1k_{z2}} = \frac{1-K^s}{1+K^s}\\
+    \tau_{12}^p &=\frac{2\varepsilon_2 k_{z1}}{\varepsilon_2 k_{z1}+\varepsilon_1k_{z2}} = \frac{2}{1+K^p},%
+    &{}& t_{12}^s=\frac{2\mu_2 k_{z1}}{\mu_2 k_{z1}+\mu_1k_{z2}} = \frac{2}{1+K^s}
+    \end{aligned}
+\] with \(K^p:= \frac{\varepsilon_1 k_{z2}}{\varepsilon_2 k_{z1}}\),
+\(K^s:= \frac{ k_{z2}}{ k_{z1}}\) (often we will assume \(\mu=1\)).
+
+Note that, \[
+    r_{ij}=-r_{ji}.
+\] For propagating incident and transmitted waves, equivalent
+expressions can also be given in terms of the angle of incidence
+\(\theta\) : \[
+r^{p}=\frac{n_{2} \cos \theta-n_{1} \sqrt{1-\frac{n_{1}^{2}}{n_{2}^{2}} \sin ^{2} \theta}}{n_{2} \cos \theta+n_{1} \sqrt{1-\frac{n_{1}^{2}}{n_{2}^{2}} \sin ^{2} \theta}} 
+\]
+\end{frame}
+
+\end{document}

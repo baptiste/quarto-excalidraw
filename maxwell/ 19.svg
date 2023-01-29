@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7pt" height="8pt" viewBox="0 0 7 8" version="1.1">
+<defs>
+<g>
+<symbol overflow="visible" id="glyph0-0">
+<path style="stroke:none;" d=""/>
+</symbol>
+<symbol overflow="visible" id="glyph0-1">
+<path style="stroke:none;" d="M 6.25 -2.734375 L 5.78125 -2.734375 C 5.578125 -1.4375 5.375 -0.46875 3.71875 -0.46875 L 2.6875 -0.46875 L 2.6875 -3.28125 L 2.90625 -3.28125 C 3.8125 -3.28125 3.859375 -2.84375 3.859375 -2.109375 L 4.328125 -2.109375 L 4.328125 -4.921875 L 3.859375 -4.921875 C 3.859375 -4.1875 3.8125 -3.75 2.90625 -3.75 L 2.6875 -3.75 L 2.6875 -6.3125 L 3.671875 -6.3125 C 5.21875 -6.3125 5.359375 -5.5 5.5 -4.375 L 5.96875 -4.375 L 5.65625 -6.78125 L 0.34375 -6.78125 L 0.34375 -6.3125 L 1.28125 -6.3125 L 1.28125 -0.46875 L 0.34375 -0.46875 L 0.34375 0 L 5.796875 0 Z M 6.25 -2.734375 "/>
+</symbol>
+</g>
+<clipPath id="clip1">
+  <path d="M 0 0.230469 L 7 0.230469 L 7 8 L 0 8 Z M 0 0.230469 "/>
+</clipPath>
+</defs>
+<g id="surface91">
+<g clip-path="url(#clip1)" clip-rule="nonzero">
+<g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
+  <use xlink:href="#glyph0-1" x="0.5" y="7.5"/>
+</g>
+</g>
+</g>
+</svg>

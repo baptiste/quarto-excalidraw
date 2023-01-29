@@ -1,0 +1,222 @@
+[ Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        InlineMath
+        "\\left(\\varepsilon_{1}, \\varepsilon_{2}\\right) \\in \\mathbb{R}_{+}^{2}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        InlineMath
+        "\\mathbf{E}(\\mathbf{r})=\\mathbf{E}_{0} e^{i \\mathbf{k} \\cdot \\mathbf{r}}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\mathbf{k}_{i}=\\left(\\begin{array}{l}\nk_{i x} \\\\\nk_{i y} \\\\\nk_{i z}\n\\end{array}\\right) \\quad \\mathbf{k}_{r}=\\left(\\begin{array}{l}\nk_{r x} \\\\\nk_{r y} \\\\\nk_{r z}\n\\end{array}\\right) \\quad \\mathbf{k}_{t}=\\left(\\begin{array}{l}\nk_{t x} \\\\\nk_{t y} \\\\\nk_{t z}\n\\end{array}\\right)"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\mathbf{E}_i(\\mathbf{r})=\\mathbf{E}_{0} e^{i \\mathbf{k_i} \\cdot \\mathbf{r}},\\mathbf{E}_r(\\mathbf{r})=r\\mathbf{E}_{0} e^{i \\mathbf{k_r} \\cdot \\mathbf{r}},\\mathbf{E}_t(\\mathbf{r})=t\\mathbf{E}_{0} e^{i \\mathbf{k_t} \\cdot \\mathbf{r}}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "\\mathbf{E}^\\parallel" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "z=0" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        InlineMath "\\mathbf{k}_i,\\mathbf{k}_t,\\mathbf{k}_r"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "\\mathbf{k}_\\parallel" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\left.e^{i \\mathbf{k_i} \\cdot \\mathbf{r}} + r e^{i \\mathbf{k_r} \\cdot \\mathbf{r}}=t e^{i \\mathbf{k_t} \\cdot \\mathbf{r}}\\right|_{z=0}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "k_y=0" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "e^{i {k_{ix}x}} + r e^{i{k_{rx}x+k_{ry}y}} = t e^{i{k_{tx}x+k_{ty}y}}, \\forall (x,y)"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "x=0" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "1 + r e^{i{k_{ry}y}} = t e^{i{k_{ty}y}}, \\forall y"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "r,t" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "(x,y)" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath "1 + r \\cos(k_{ry}y) = t \\cos({k_{ty}y})"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "k_{ry}=k_{ty}=0" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "k_y=0" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "e^{i {k_{ix}x}} + r e^{i{k_{rx}x}} = t e^{i{k_{tx}x}}, \\forall x"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "e^{-i {k_{ix}x}}" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "1 + r e^{i{(k_{rx}-k_{ix})x}} = t e^{i{(k_{tx}-k_{ix})x}}, \\forall x"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "k_{rx}=k_{tx}=k_{ix}" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\theta_i = \\theta_r,\\quad n_1\\sin \\theta_i=n_2\\sin \\theta_t"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "k_{x}, k_{y}" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\mathbf{k}_{i} \\cdot \\mathbf{k}_{i}=k_{0}^{2} \\varepsilon_{i} \\quad \\Rightarrow k_{i}=k_{0} \\sqrt{\\varepsilon_{i}}=k_{0} n_{i}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\left\\{\\begin{array}{l}k_{i x}=n_{1} k_{0} \\sin \\theta_{i} \\\\ k_{r x}=n_{1} k_{0} \\sin \\theta_{r} \\\\ k_{t x}=n_{2} k_{0} \\sin \\theta_{t}\\end{array}\\right."
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\left\\{\\begin{array}{c}\\theta_{i}=\\theta_{r} \\\\ n_{1} \\sin \\theta_{i}=n_{2} \\sin \\theta_{t}\\end{array}\\right."
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        InlineMath
+        "(x 0 z) \\Rightarrow \\mathbf{k}_{1}=k_{1 x} \\mathbf{e}_{x}+k_{1 z} \\mathbf{e}_{z}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "z=0" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math InlineMath "k_{i x}=k_{r x}=k_{t x} \\equiv k_{x}" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        InlineMath
+        "\\mathbf{k} \\cdot \\mathbf{k}=\\varepsilon k_{0}^{2}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\Rightarrow \\left\\{\\begin{array}{l}\nk_{x}^{2}+k_{i z}^{2}=\\varepsilon_{1} k_{0}^{2} \\quad \\Rightarrow k_{i z}=\\pm \\sqrt{\\varepsilon_{1} k_{0}^{2}-k_{x}^{2}}=-k_{r z} \\\\\nk_{x}^{2}+k_{r z}^{2}=\\varepsilon_{1} k_{0}^{2} \\\\\nk_{x}^{2}+k_{t z}^{2}=\\varepsilon_{2} k_{0}^{2}\n\\end{array}\\right."
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "E^y" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math DisplayMath "1+r =t." ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "H^x" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "H^x" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        InlineMath
+        "\\mathbf{k}\\times\\mathbf{E}= \\omega\\mathbf{B}= \\omega\\mu\\mathbf{H}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math DisplayMath "\\omega\\mu H_x = k_z E_y" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\frac{k_{iz}}{\\mu_1}E_{iy} + \\frac{k_{rz}}{\\mu_1}E_{ry} = \\frac{k_{tz}}{\\mu_2}E_{ty}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "k_{rz} = -k_{iz}" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\frac{k_{iz}}{\\mu_1} - \\frac{k_{iz}}{\\mu_1}r = \\frac{k_{tz}}{\\mu_2}t,"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "1 - r = \\frac{\\mu_1}{\\mu_2}\\frac{k_{tz}}{k_{iz}}t"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\left\\{\n\\begin{aligned}\n1 + r &= t\\\\\n1 - r &= \\frac{\\mu_1}{\\mu_2}\\frac{k_{tz}}{k_{iz}}t\n\\end{aligned}\\right."
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "r" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "t" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "t_{12}^s=\\frac{2\\mu_2 k_{z1}}{\\mu_2 k_{z1}+\\mu_1k_{z2}},\\qquad r_{12}^s=\\frac{\\mu_2 k_{z1}-\\mu_1k_{z2}}{\\mu_2 k_{z1}+\\mu_1k_{z2}}."
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "t_{12}^s=\\frac{2}{1+K_s},\\qquad r_{12}^s=\\frac{1 - K_s}{1 + K_s},\\qquad K_s:=\\frac{\\mu_1}{\\mu_2}\\frac{k_{z2}}{k_{z1}}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "z" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "\\begin{aligned}\n    \\rho_{12}^p & =\\frac{\\varepsilon_2 k_{z1}-\\varepsilon_1k_{z2}}{\\varepsilon_2 k_{z1}+\\varepsilon_1k_{z2}} = \\frac{1-K^p}{1+K^p},%\n    & {}& r_{12}^s=\\frac{\\mu_2 k_{z1}-\\mu_1k_{z2}}{\\mu_2 k_{z1}+\\mu_1k_{z2}} = \\frac{1-K^s}{1+K^s}\\\\\n    \\tau_{12}^p &=\\frac{2\\varepsilon_2 k_{z1}}{\\varepsilon_2 k_{z1}+\\varepsilon_1k_{z2}} = \\frac{2}{1+K^p},%\n    &{}& t_{12}^s=\\frac{2\\mu_2 k_{z1}}{\\mu_2 k_{z1}+\\mu_1k_{z2}} = \\frac{2}{1+K^s}\n    \\end{aligned}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        InlineMath
+        "K^p:= \\frac{\\varepsilon_1 k_{z2}}{\\varepsilon_2 k_{z1}}"
+    ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "K^s:= \\frac{ k_{z2}}{ k_{z1}}" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "\\mu=1" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math DisplayMath "r_{ij}=-r_{ji}." ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain [ Math InlineMath "\\theta" ]
+, Plain [ Str "math" , Space , Str "start" ]
+, Plain
+    [ Math
+        DisplayMath
+        "r^{p}=\\frac{n_{2} \\cos \\theta-n_{1} \\sqrt{1-\\frac{n_{1}^{2}}{n_{2}^{2}} \\sin ^{2} \\theta}}{n_{2} \\cos \\theta+n_{1} \\sqrt{1-\\frac{n_{1}^{2}}{n_{2}^{2}} \\sin ^{2} \\theta}}"
+    ]
+]
